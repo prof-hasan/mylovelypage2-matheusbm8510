@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Manual do vale</title>
+    <link rel="icon" href="https://www.pngkey.com/png/full/219-2197908_pixilart-stardew-valley-chicken-logo.png">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="leaves-container"></div>
+    <img id="logo" src="img/logo.png" alt="logo">
+    <header>
+        <h1>Navegar</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="ganhardinheiro.html">Ganhar Dinheiro</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Informações</h1>
+        <p>Site feito por: Matheus Batista Medeiros</p>
+        <p>Fontes:</p>
+        <ul>
+            <li>Informações e imagens dos personagens e presentes retiradas de <a href="https://www.stardewvalleywiki.com/Stardew_Valley_Wiki">Stardew Valley Wiki</a></li>
+            <li>Som da galinha retirado de <a href="https://pixabay.com">Pixabay</a></li>
+            <li>Imagem da galinha retirado de <a href="https://www.pikpng.com">PikPNG</a></li>
+            <li>Imagem da fazenda e das folhas caindo retiradas de <a href="https://pinterest.com">Pinterest</a></li>
+            <li>Fontes retiradas de <a href="https://fonts.google.com">Google Fonts</a></li>
+            <li>Vídeos retirados do canal de <a href="https://www.youtube.com/@eduanttunes">Edu Anttunes</a></li>
+            <li>Logo criada por mim</li>
+            
+        </ul>
+        <h1>Itens opcionais (ponto extra)</h1>
+        <p><mark>(3-10%)</mark> Criar algo interativo na página usando JavaScript.</p>
+        <pre><code>const container = document.getElementById('leaves-container');
+
+            function createLeaf() {
+            const leaf = document.createElement('div');
+            leaf.classList.add('leaf');
+
+  
+            leaf.style.left = Math.random() * window.innerWidth + 'px';
+
+            leaf.style.animationDuration = 5 + Math.random() * 5 + 's';
+
+            leaf.style.width = 20 + Math.random() * 40 + 'px';
+            leaf.style.height = leaf.style.width;
+
+            container.appendChild(leaf);
+
+
+                leaf.addEventListener('animationend', () => {
+                    leaf.remove();
+                });
+            }
+
+
+            setInterval(createLeaf, 1500);</code></pre>
+        <p><mark>(5-10%)</mark> Colocar animações, transições e transformações: <em>hover</em> nos personagens</p>
+        <p><mark>(2-5%)</mark> Easter eggs usando CSS ou JavaScript: <strong>clicar na galinha</strong></p>
+        <p><mark>(5%)</mark> Alguns elementos com posicionamento não estático: galinha <em>fixed</em> e o quadro <em>sticky</em></p>
+        <p><mark>(3%)</mark>Exibição de um vídeo sobre o tema (o código)</p>
+        <img src="img/biohazard-video.png">
+    </main>
+    <footer>
+        <p>Obrigado pela atenção ★</p>
+    </footer>
+    <img id="chicken" src="https://www.pikpng.com/pngl/b/160-1602286_pixilart-chicken-stardew-valley-by-r-stardew-valley.png" alt="Galinha">
+    <audio id="chicken-sound" src="audio/galinha-barulho.mp3"></audio>
+    <script src="script.js"></script> 
+</body>
+</html>
